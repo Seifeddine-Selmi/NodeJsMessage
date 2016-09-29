@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Node JS </title>
+    <link rel="stylesheet" href="/assets/semantic/semantic.min.css">
+    <style>
+        .main.container{
+            margin-top: 7em;
+        }
+    </style>
+</head>
+<body>
+
+<h1> Apprendre NodeJS et EJS</h1>
+
+<div class="ui fixed inverted menu">
+
+    <a href="/" class="header item">Accueil</a>
+</div>
+
+<div class="ui main container">
+    <!-- locals Vérifier l'existance d'une variable -->
+    <% if(locals.flash && locals.flash.error){ %>
+        <div class="ui negative message">
+
+            <%= flash.error %>
+        </div>
+
+    <% } %>
+
+    <% if(locals.flash && locals.flash.success){ %>
+    <div class="ui positive message">
+
+        <%= flash.success %>
+    </div>
+
+    <% } %>

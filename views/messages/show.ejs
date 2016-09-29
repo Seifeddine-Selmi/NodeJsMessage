@@ -1,0 +1,30 @@
+
+<% include ../pages/header %>
+
+
+<div class="ui comments">
+
+    <h3 class="ui dividing header">Commentaires</h3>
+
+    <div class="comment">
+
+        <a href="/message/<%= message.id %>" class="avatar">
+            <img src="/assets/images/avatar.jpg" alt="">
+        </a>
+        <div class="content">
+            <div class="metadata">
+                <div class="date">
+                    <%= moment(message.created_at).fromNow()  %>
+                </div>
+            </div>
+            <div class="test">
+
+                <%= message.content %>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+</div>
+<% include ../pages/footer %>
